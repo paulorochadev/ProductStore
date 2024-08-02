@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Product } from '../../shared/interfaces/product.interface';
 import { ProductsService } from '../../shared/services/products.service';
 import { CardComponent } from './components/card/card.component';
@@ -19,10 +19,15 @@ export class ListComponent {
   products: Product[] = [];
 
   productsService = inject(ProductsService);
+  router = inject(Router);
 
   ngOnInit(){
     this.productsService.getAll().subscribe((products) => {
       this.products = products
     })
+  }
+
+  OnEdit(){
+    this.router.navigateByUrl('edit-product')
   }
 }
