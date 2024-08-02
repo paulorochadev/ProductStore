@@ -3,7 +3,7 @@ import { Component, computed, input } from '@angular/core';
 /* ANGULAR MATERIAL */
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { Product } from '../../../../shared/interfaces/product';
+import { Product } from '../../../../shared/interfaces/product.interface';
 
 @Component({
   selector: 'app-card',

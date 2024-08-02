@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Product } from '../../shared/interfaces/product';
+import { Product } from '../../shared/interfaces/product.interface';
 import { ProductsService } from '../../shared/services/products.service';
 import { CardComponent } from './components/card/card.component';
 
