@@ -1,18 +1,19 @@
 import { Component, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { filter } from 'rxjs';
 import { Product } from '../../shared/interfaces/product.interface';
 import { ConfirmationDialogService } from '../../shared/services/confirmation-dialog.service';
 import { ProductsService } from '../../shared/services/products.service';
 import { CardComponent } from './components/card/card.component';
+import { NoItemsComponent } from './components/no-items/no-items.component';
 
 /* ANGULAR MATERIAL */
 import { MatButtonModule } from '@angular/material/button';
-import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [CardComponent, RouterLink, MatButtonModule],
+  imports: [CardComponent, RouterLink, MatButtonModule, NoItemsComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'
 })
