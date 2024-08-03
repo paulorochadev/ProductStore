@@ -1,10 +1,6 @@
 {
   "products": [
     {
-      "title": "Produto de Teste 2",
-      "id": "1"
-    },
-    {
       "id": "9c59",
       "title": "Camiseta"
     },
